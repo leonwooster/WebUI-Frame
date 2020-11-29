@@ -2923,3 +2923,4 @@ System.Net.Sockets.SocketException (11001): No such host is known.
 2020-11-23 00:58:29,590 [1] INFO  Microsoft.Hosting.Lifetime [(null)] - Application started. Press Ctrl+C to shut down.
 2020-11-23 00:58:29,651 [1] INFO  Microsoft.Hosting.Lifetime [(null)] - Hosting environment: Development
 2020-11-23 00:58:29,655 [1] INFO  Microsoft.Hosting.Lifetime [(null)] - Content root path: E:\Test_Projects\AspCoreFrame
+aassadsad
