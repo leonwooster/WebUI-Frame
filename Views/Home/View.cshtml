@@ -1,0 +1,22 @@
+﻿@model FormModel
+
+<div class="text-center">
+    <h3 style="font-weight:bold">View Only</h3>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-dismissible alert-success" role="alert">@Html.Raw(TempData["Success"].ToString())</div>
+    TempData["Success"] = null;
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-dismissible alert-danger" role="alert">@Html.Raw(TempData["Error"].ToString())</div>
+    TempData["Error"] = null;
+}
+
+@section Scripts
+{
+    
+}

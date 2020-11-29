@@ -1,0 +1,29 @@
+﻿@model AspCoreFrame.WebUI.Models.FormModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+<div class="text-center">
+    <h3>Welcome to my Home Page</h3>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-dismissible alert-success" role="alert">@Html.Raw(TempData["Success"].ToString())</div>
+    TempData["Success"] = null;
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-dismissible alert-danger" role="alert">@Html.Raw(TempData["Error"].ToString())</div>
+    TempData["Error"] = null;
+}
+
+@using (Html.BeginForm("Save", "Home", FormMethod.Post, new { @id = "form1", @enctype = "multipart/form-data", @autocomplete = "off" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.id)
+}
+
+@section Scripts
+{
+    <script type="text/javascript" src="~/js/site.js"></script>
+}
